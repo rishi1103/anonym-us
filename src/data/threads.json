@@ -1,0 +1,55 @@
+{
+  "Threads": [
+    {
+      "id": 1,
+      "title": "Thread 1",
+      "comments": [
+        {
+          "id": 1,
+          "text": "Comment 1",
+          "timestamp": 1679483461000
+        },
+        {
+          "id": 2,
+          "text": "Comment 2",
+          "timestamp": 1579471268000
+        }
+      ],
+      "createdAt": 1779483461000
+    },
+    {
+      "id": 2,
+      "title": "Thread 2",
+      "comments": [
+        {
+          "id": 3,
+          "text": "Comment 3",
+          "timestamp": 1679425962000
+        },
+        {
+          "id": 4,
+          "text": "Comment 4",
+          "timestamp": 1679479465000
+        },
+        {
+          "id": 5,
+          "text": "Comment 5",
+          "timestamp": 1679443468000
+        }
+      ],
+      "createdAt": 1679425962000
+    },
+    {
+      "id": 3,
+      "title": "Thread 3",
+      "comments": [
+        {
+          "id": 6,
+          "text": "Comment 6",
+          "timestamp": 1687998852308
+        }
+      ],
+      "createdAt": 1587998852308
+    }
+  ]
+}

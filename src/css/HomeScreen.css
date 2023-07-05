@@ -1,0 +1,82 @@
+.heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.heading-container h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+/*  margin-bottom: 20px;*/
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.toggle.left {
+  justify-content: flex-start;
+  padding-left: 10px;
+  background-color: #FF0063;
+}
+
+.toggle.right {
+  justify-content: flex-end;
+  padding-right: 10px;
+  background-color: #ddd;
+}
+
+.toggle-switch {
+  width: 35px;
+  height: 35px;
+  border-radius: 17.5px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.toggle.left .toggle-switch {
+  transform: translateX(0);
+}
+
+.toggle.right .toggle-switch {
+  transform: translateX(9%);
+}
+
+.toggle-switch::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 17.5px;
+  background-color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+.toggle.left .toggle-switch::before {
+  background-color: #fff;
+}
+
+.toggle.right .toggle-switch::before {
+  background-color: #fff;
+}
