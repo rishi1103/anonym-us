@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
 import './css/CreateThreadScreen.css';
-import app from './firebase.js'
+import {db} from './firebase.js'
+import {addDoc, collection } from '@firebase/firestore';
 
 const CreateThreadScreen = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
-  var ThreadsDB = app.database().ref('Threads');
+  const ref = collection(db, "Threads");
 
-  const handleCreateThread = () => {
+
+  const handleCreateThread = async(e) => {
+    e.preventDefault();
     // Perform thread creation logic here
     if (title && content) {
-      var newThread = ThreadsDB.push();
-
-      newThread.set({
-        id : ThreadsDB.length + 1,
+      let data = {
+        createdAt : new Date().getTime(),
         title : title,
-        comments: null,
-      });
+        content : content,
+        comments : null,
+      };
+
+      addDoc(ref, data);
+
       // Process the thread data, for example, send a request to an API or save to the database
       console.log('Thread created successfully!');
       // Optionally, you can redirect the user to a different page after successful thread creation

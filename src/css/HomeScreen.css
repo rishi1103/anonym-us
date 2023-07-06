@@ -80,3 +80,95 @@
 .toggle.right .toggle-switch::before {
   background-color: #fff;
 }
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 10px;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+.thread-box {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.comment-count-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.thread-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.thread-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.thread-details p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #888;
+}
+
+.thread-title-container {
+  display: flex;
+  align-items: center;
+}

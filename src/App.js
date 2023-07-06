@@ -5,7 +5,7 @@ import UserLoginScreen from './UserLoginScreen.js';
 import CreateThreadScreen from './CreateThreadScreen.js';
 import NavigationBar from './Navigation.js';
 import HomeScreen from './HomeScreen.js';
-// import ViewThreadScreen from './ViewThreadScreen.js';
+import ViewThreadScreen from './ViewThreadScreen.js';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 
@@ -20,6 +20,7 @@ const App = () => {
           <Route exact path="/register" element={<UserRegistrationScreen/>}/>
           <Route exact path="/login" element={<UserLoginScreen/>}/>
           <Route exact path="/create" element={<CreateThreadScreen/>}/>
+          <Route path="/threads/:threadId" element={<ViewThreadScreen />} />
         </Routes>
       </div>
     </Router>
