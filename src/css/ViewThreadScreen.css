@@ -125,27 +125,66 @@
 }
 
 .comment {
+  position: relative;
   background-color: #f8f8f8;
   padding: 8px;
+  padding-right: 0;
   margin-bottom: 0.5rem;
   border-radius: 4px;
+  word-break: break-word;
 }
 
-.comment {
+.comment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+}
+
+.comment-content {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  align-items: flex-start;
 }
 
 .comment-icon {
   width: 30px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
-.comment-content {
+.comment-text {
   flex-grow: 1;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-.comment-content p {
-  margin: 0;
+.comment-actions {
+  display: flex;
+  align-items: center;
+}
+
+.reply-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.reply-button img {
+  width: 20px;
+}
+
+.comment-form.reply-form {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.comment-input-container {
+  width: 100%;
+}
+
+.comment-input {
+  width: 100%;
 }
