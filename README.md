@@ -1,3 +1,7 @@
+# Anonym-us - Forum App
+
+This project has been made using ReactDOM, and for the backend, Firebase was used. These are the commands you might find helpful to run the web app.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
